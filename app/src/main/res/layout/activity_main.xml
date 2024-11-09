@@ -1,0 +1,268 @@
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2C2C2C"
+    android:padding="16dp"
+    app:layoutDescription="@xml/activity_main_scene">
+
+    <!-- Display for the equation and result -->
+    <TextView
+        android:id="@+id/equationDisplay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="#3D3D3D"
+        android:gravity="end"
+        android:padding="24dp"
+        android:text="0"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonClear"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Buttons Layout -->
+    <Button
+        android:id="@+id/buttonClear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:backgroundTint="#D32F2F"
+        android:text="C"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/buttonDelete"
+        app:layout_constraintTop_toBottomOf="@id/equationDisplay" />
+
+    <Button
+        android:id="@+id/buttonDelete"
+        android:layout_width="104dp"
+        android:layout_height="49dp"
+        android:layout_margin="4dp"
+        android:backgroundTint="#D32F2F"
+        android:text="DEL"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toRightOf="@id/buttonClear"
+        app:layout_constraintRight_toLeftOf="@id/buttonDivide"
+        app:layout_constraintTop_toBottomOf="@id/equationDisplay" />
+
+    <Button
+        android:id="@+id/buttonDivide"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:backgroundTint="#0288D1"
+        android:text="/"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toRightOf="@id/buttonDelete"
+        app:layout_constraintRight_toLeftOf="@id/buttonMultiply"
+        app:layout_constraintTop_toBottomOf="@id/equationDisplay" />
+
+    <Button
+        android:id="@+id/buttonMultiply"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:backgroundTint="#0288D1"
+        android:text="*"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toRightOf="@id/buttonDivide"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/equationDisplay" />
+
+    <!-- Row for 7, 8, 9, and - -->
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:backgroundTint="#616161"
+        android:text="7"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/button8"
+        app:layout_constraintTop_toBottomOf="@id/buttonClear" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:backgroundTint="#616161"
+        android:text="8"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toRightOf="@id/button7"
+        app:layout_constraintRight_toLeftOf="@id/button9"
+        app:layout_constraintTop_toBottomOf="@id/buttonClear" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:backgroundTint="#616161"
+        android:text="9"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toRightOf="@id/button8"
+        app:layout_constraintRight_toLeftOf="@id/buttonSubtract"
+        app:layout_constraintTop_toBottomOf="@id/buttonClear" />
+
+    <Button
+        android:id="@+id/buttonSubtract"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:backgroundTint="#0288D1"
+        android:text="-"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toRightOf="@id/button9"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonClear" />
+
+    <!-- Row for 4, 5, 6, and + -->
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:backgroundTint="#616161"
+        android:text="4"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/button5"
+        app:layout_constraintTop_toBottomOf="@id/button7" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:backgroundTint="#616161"
+        android:text="5"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toRightOf="@id/button4"
+        app:layout_constraintRight_toLeftOf="@id/button6"
+        app:layout_constraintTop_toBottomOf="@id/button7" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:backgroundTint="#616161"
+        android:text="6"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toRightOf="@id/button5"
+        app:layout_constraintRight_toLeftOf="@id/buttonAdd"
+        app:layout_constraintTop_toBottomOf="@id/button7" />
+
+    <Button
+        android:id="@+id/buttonAdd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:backgroundTint="#0288D1"
+        android:text="+"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toRightOf="@id/button6"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button7" />
+
+    <!-- Row for 1, 2, 3, and = -->
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:backgroundTint="#616161"
+        android:text="1"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/button2"
+        app:layout_constraintTop_toBottomOf="@id/button4" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:backgroundTint="#616161"
+        android:text="2"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toRightOf="@id/button1"
+        app:layout_constraintRight_toLeftOf="@id/button3"
+        app:layout_constraintTop_toBottomOf="@id/button4" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:backgroundTint="#616161"
+        android:text="3"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toRightOf="@id/button2"
+        app:layout_constraintRight_toLeftOf="@id/buttonEqual"
+        app:layout_constraintTop_toBottomOf="@id/button4" />
+
+    <!-- Button for 0 and . (last row) -->
+    <Button
+        android:id="@+id/buttonEqual"
+        android:layout_width="95dp"
+        android:layout_height="111dp"
+        android:layout_margin="4dp"
+        android:backgroundTint="#388E3C"
+        android:text="="
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/button3"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button4"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button0"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:backgroundTint="#616161"
+        android:text="0"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/buttonDot"
+        app:layout_constraintTop_toBottomOf="@id/button1" />
+
+    <Button
+        android:id="@+id/buttonDot"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:backgroundTint="#616161"
+        android:text="."
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toRightOf="@id/button0"
+        app:layout_constraintRight_toLeftOf="@id/buttonEqual"
+        app:layout_constraintTop_toBottomOf="@id/button1" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
